@@ -1,0 +1,26 @@
+{
+  "name": "pocketblog",
+  "version": "0.1.0",
+  "description": "A very bare bones blog application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LangdalP/PocketBlog.git"
+  },
+  "keywords": [
+    "blog",
+    "minimal"
+  ],
+  "author": "Peder Voldnes Langdal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LangdalP/PocketBlog/issues"
+  },
+  "homepage": "https://github.com/LangdalP/PocketBlog#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
