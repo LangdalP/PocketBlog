@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs'); // For file operations
+var marked = require('marked'); // For markdown-parsing
 
 /*
  * Filenames are mapped to shorter identifiers (keys).
@@ -26,7 +27,16 @@ function indexFile(path) {
     fs.readFile(path, 'utf8', function (err, data) {
         if (err) throw err;
         var indexName = filenameToIndexKey(fname);
-        index.articleKeys[indexName] = data;
+        var lines = data.split(/\r?\n/);
+        var headlineRaw = lines[0];
+        /*
+        Note: Here it is assumed that each file starts with '# Headline'
+        TODO: Make more robust, e.g. handle cases where the headline is
+        not on the first line, or where the space after the hash is omitted
+        */
+        var headline = headlineRaw.substring(2);
+        var markup = marked(data);
+        index.articleKeys[indexName] = {headline: headline, markup: markup};
         index.articleFilenames[fname] = indexName;
     });
 }
@@ -34,25 +44,14 @@ function indexFile(path) {
 function removeIndexedFile(path) {
     var pathParts = path.split("/");
     var fname = pathParts[pathParts.length - 1];
-    var indexName = filenameToIndexKey(indexName);
+    var indexName = filenameToIndexKey(fname);
     delete index.articleKeys[indexName];
     delete index.articleFilenames[fname];
 }
 
 function tryFetchArticle(name, callback) {
     var data = index.articleKeys[name];
-    if (data) {
-        var lines = data.split(/\r?\n/);
-        var headlineRaw = lines[0];
-        var headline = headlineRaw.substring(2);
-        callback({
-            headline: headline,
-            articleMarkdown: data
-        });
-    }
-    else {
-        callback(null);
-    }
+    callback(data);
 }
 
 function tryFetchLatest(count, callback) {
@@ -61,17 +60,11 @@ function tryFetchLatest(count, callback) {
     var sortedKeys = keys.sort();
     var latestKeys = sortedKeys.slice(sortedKeys.length - count, sortedKeys.length);
     var articles = [];
-    for (var i = 0; i < latestKeys.length; ++i) {
+    for (var i = latestKeys.length - 1; i >= 0; i--) {
         var key = filenameToIndexKey(latestKeys[i]);
         var data = index.articleKeys[key];
         if (data) {
-            var lines = data.split(/\r?\n/);
-            var headlineRaw = lines[0];
-            var headline = headlineRaw.substring(2);
-            articles.push({
-                headline: headline,
-                articleMarkdown: data
-            });
+            articles.push(data);
         }
         else {
             console.log("Error happened while fetching latest articles");

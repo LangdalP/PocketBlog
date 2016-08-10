@@ -7,14 +7,9 @@ function registerRoutes(app, auth) {
     app.get('/', function (req, res) {
         articles.tryFetchLatest(2, function (posts) {
             if (posts) {
-                var parsedArticles = []
-                for (var i = posts.length - 1; i >= 0; --i) {
-                    var articleMarkdown = posts[i].articleMarkdown;
-                    parsedArticles.push({articleMarkup: marked(articleMarkdown)});
-                }
                 res.render('manyArticles', {
                     pageTitle: 'Code Climbing',
-                    articles: parsedArticles
+                    articles: posts
                 });
             }
             else {
@@ -29,7 +24,7 @@ function registerRoutes(app, auth) {
             if (articleData) {
                 res.render('article', {
                     pageTitle: articleData.headline,
-                    articleMarkup: marked(articleData.articleMarkdown)
+                    markup: articleData.markup
                 });
             }
             else {
@@ -46,7 +41,7 @@ function registerRoutes(app, auth) {
             if (articleData) {
                 res.render('article', {
                     pageTitle: articleData.headline,
-                    articleMarkup: marked(articleData.articleMarkdown)
+                    articleMarkup: articleData.markup
                 });
             }
             else {
