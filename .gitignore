@@ -48,3 +48,7 @@ tags
 
 # Articles
 articles/*.md
+
+# Images, excluding site graphics
+images/*
+
