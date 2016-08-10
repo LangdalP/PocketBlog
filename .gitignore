@@ -45,3 +45,6 @@ admins.json
 
 # CTags tags
 tags
+
+# Articles
+articles/*.md
