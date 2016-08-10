@@ -2,11 +2,62 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Peder Voldnes Langda">
     <title>{{pageTitle}}</title>
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href="/styles/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="/styles/solarized-dark.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
+    <div class="container-wide" id="header-container">
+        <header>
+            <div id="header-text">
+                <a href="/"><h1>CODE CLIMBING</h1></a>
+            </div>
+            <div id="header-links">
+                <ul>
+                    <li><a href="#">Other topics</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="container-wide" id="main-container">
+        <main>
+        
+            {{{body}}}
 
-    {{{body}}}
-
+        </main>
+    </div>
+    <div class="container-wide" id="footer-container">
+        <footer>
+            <div id="footer-left">
+                <p>All content created by <strong>Peder Voldnes Langdal</strong> unless stated otherwise.</p>
+                <p>Below is a vector image of a <a target="_blank" href="https://en.wikipedia.org/wiki/Slogen">mountain I like.</a></p>
+            </div>
+            <div id="footer-right">
+                <h2>Social media</h2>
+                <ul id="social-list">
+                    <li><a target="_blank" href="https://www.instagram.com/pedervl/"><img src="/images/instagram-logo.png" width="32px" alt="Instagram logo"></a></li>
+                    <li><a target="_blank" href="#"><img src="/images/linkedin-logo-button.png" width="32px" alt="LinkedIn logo"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/PLangdal"><img src="/images/twitter-logo-button.png" width="32px" alt="Twitter logo"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div class="container-wide" id="bottom-container">
+        <div class="container-wide" id="bottom-inner-container">
+            <img src="/images/slogen3.svg.png" width="100%" alt="An image of Slogen">
+        </div>
+    </div>
 </body>
 </html>
