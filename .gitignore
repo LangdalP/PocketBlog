@@ -50,5 +50,8 @@ tags
 articles/*.md
 
 # Images, excluding site graphics
-images/*
+images/*.png
+images/*.jpg
+images/*.svg
+
 
