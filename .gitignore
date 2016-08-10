@@ -43,3 +43,5 @@ jspm_packages
 # Don't want to commit potentially sensitive files
 admins.json
 
+# CTags tags
+tags
