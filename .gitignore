@@ -48,6 +48,7 @@ tags
 
 # Articles
 articles/*.md
+!articles/0000_example.md
 
 # Images, excluding site graphics
 images/*
