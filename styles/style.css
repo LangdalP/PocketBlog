@@ -13,6 +13,13 @@ body {
     margin: 0;
 }
 
+/*
+----------------------------------------
+HEADER
+----------------------------------------
+*/
+
+
 #header-container {
     background: #32577A;
     background-image: url('/images/site/fjell_header1.png');
@@ -81,6 +88,12 @@ header {
     color: #EEAA8A;
 }
 
+/*
+----------------------------------------
+MAIN - Articles and other content
+----------------------------------------
+*/
+
 #main-container {
     margin-top: 2rem;
     background-image: url('/images/site/footer_topp1.png');
@@ -120,9 +133,21 @@ main ul {
 
 }
 
+main li {
+    margin-bottom: 0.5rem;
+}
+
 main img {
     max-width: 100%;
     max-width: 100%;
+}
+
+main a {
+    color: #2d2d2d;
+}
+
+main a:hover {
+    color: #EEAA8A;
 }
 
 .article-info {
@@ -131,6 +156,12 @@ main img {
     margin-bottom: 0.3rem;
     text-align: right;
 }
+
+/*
+----------------------------------------
+FOOTER
+----------------------------------------
+*/
 
 #footer-container {
     width: 100%;
