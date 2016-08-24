@@ -2,9 +2,8 @@
   "name": "pocketblog",
   "version": "0.1.0",
   "description": "A very bare bones blog application",
-  "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node bin/www"
   },
   "repository": {
     "type": "git",
