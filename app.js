@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars'); // View engine
 var basicAuth = require('basic-auth'); // Authentication
 var marked = require('marked'); // For markdown-parsing
+var highlightjs = require('highlight.js');
 
 var watcher = require('./articles/watcher.js'); // Helper for listening on changes to articles
 var articles = require('./articles/fetcher.js'); // Helper for fetching article if it exists
@@ -37,8 +38,12 @@ var auth = function (req, res, next) {
 
 // Synchronous highlighting with highlight.js
 marked.setOptions({
-    highlight: function (code) {
-        return require('highlight.js').highlightAuto(code).value;
+    highlight: function (code, lang) {
+        if (lang && highlightjs.getLanguage(lang)) {
+            return highlightjs.highlight(lang, code).value;
+        } else {
+            return highlightjs.highlightAuto(code).value;
+        }
   }
 });
 
