@@ -11,14 +11,14 @@ var articleDstPath = path.join(workingDir, 'content/articles');
 
 gulp.task('images', function () {
 	// Can be customized
-	fs.ensureLink(imageContentSrcPath, imageContentDstPath, function (err) {
+	fs.ensureSymlink(imageContentSrcPath, imageContentDstPath, function (err) {
 		if (err) return console.error(err)
 	})
 });
 
 gulp.task('articles', function () {
 	// Can be customized
-	fs.ensureLink(articleSrcPath, articleDstPath, function (err) {
+	fs.ensureSymlink(articleSrcPath, articleDstPath, function (err) {
 		if (err) return console.error(err)
 	})
 });
