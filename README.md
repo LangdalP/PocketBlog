@@ -18,21 +18,25 @@ The core goals of this project is to write a simple Node.js application that is 
 # Basic setup
 
 1. Clone repo
-2. Create admins.json. It contains user accounts that are admins. Example:
-```
-{
-    "users": [
-        {"name": "Peder", "password": "Kake55"}
-    ]
-}
-```
-3. Create config.json. It contains the locations of your article files and images (images used in the articles). Example:
-```
-{
-    "imageSource": "C:/Users/PederVoldnes/blog/images",
-    "articleSource": "C:/Users/PederVoldnes/blog/articles"
-}
-```
+2. Create admins.json in the root directory. It contains user accounts that are admins. Example:
+
+    ```
+    {
+        "users": [
+            {"name": "Peder", "password": "Kake55"}
+        ]
+    }
+    ```
+
+3. Create config.json in the root directory. It contains the locations of your article files and images (images used in the articles). Example:
+
+    ```
+    {
+        "imageSource": "C:/Users/PederVoldnes/blog/images",
+        "articleSource": "C:/Users/PederVoldnes/blog/articles"
+    }
+    ```
+
 4. `npm install`
 5. `gulp`
 6. `npm start`
