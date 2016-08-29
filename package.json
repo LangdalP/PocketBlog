@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "A very bare bones blog application",
   "scripts": {
-    "start": "NODE_ENV=production node bin/www",
+    "start": "PORT=80 NODE_ENV=production node bin/www",
+    "start-dev": "node bin/www",
     "postinstall": "cp example/0000_example.md content/articles"
   },
   "repository": {
