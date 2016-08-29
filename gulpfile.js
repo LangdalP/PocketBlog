@@ -6,14 +6,14 @@ var articleSrcPath = require('./config.json')['articleSource']
 var imageContentDstPath = 'images/content';
 var articleDstPath = 'content/articles';
 
-gulp.task('images', ['clean-images'], function () {
+gulp.task('images', function () {
 	// Can be customized
 	fs.ensureLink(imageContentSrcPath, imageContentDstPath, function (err) {
 		if (err) return console.error(err)
 	})
 });
 
-gulp.task('articles', ['clean-articles'], function () {
+gulp.task('articles', function () {
 	// Can be customized
 	fs.ensureLink(articleSrcPath, articleDstPath, function (err) {
 		if (err) return console.error(err)
