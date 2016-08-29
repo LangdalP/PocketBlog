@@ -14,3 +14,25 @@ The core goals of this project is to write a simple Node.js application that is 
 * The `articles` folder is monitored such that adding, changing or removing a file will automatically update the blog
 * The article files must have the file extension `.md`
 * Articles are indexed in-memory, so a request will not lead to articles being read from file
+
+# Basic setup
+
+1. Clone repo
+2. Create admins.json. It contains user accounts that are admins. Example:
+```
+{
+    "users": [
+        {"name": "Peder", "password": "Kake55"}
+    ]
+}
+```
+3. Create config.json. It contains the locations of your article files and images (images used in the articles). Example:
+```
+{
+    "imageSource": "C:/Users/PederVoldnes/blog/images",
+    "articleSource": "C:/Users/PederVoldnes/blog/articles"
+}
+```
+4. `npm install`
+5. `gulp`
+6. `npm start`

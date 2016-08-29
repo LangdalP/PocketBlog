@@ -6,6 +6,7 @@ app.set('port', process.env.PORT || 3000);
 
 console.log('Going to use port: ' + app.get('port'));
 
+// TODO: Start using debug framework
 function getDateTime() {
 
     var date = new Date();

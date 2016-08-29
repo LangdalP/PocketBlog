@@ -17,7 +17,7 @@ watcher.start(articles);
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// Authentication middleware
+// Authentication middleware. Temporary.
 var auth = function (req, res, next) {
     var user = basicAuth(req);
     if (!user || !user.name || !user.pass) {
