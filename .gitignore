@@ -47,8 +47,7 @@ admins.json
 tags
 
 # Articles
-articles/*.md
-!articles/0000_example.md
+content/articles/*.md
 
 # Images, excluding site graphics
 images/*
