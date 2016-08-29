@@ -21,6 +21,7 @@ function filenameToIndexKey(fname) {
     return indexName;
 }
 
+// TODO: Use path module for greater portability
 function indexFile(path) {
     var pathParts = path.split("/");
     var fname = pathParts[pathParts.length - 1];

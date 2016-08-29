@@ -1,10 +1,11 @@
 var chokidar = require('chokidar'); // For watching files and directories
 
+var articlesPath = 'content/articles';
+
 // Start listening, and report changes to the articles object passed in
 function start(articles) {
     // Watch articles folder
-    var watcher = chokidar.watch('articles', {
-        ignored: 'articles/*.js',
+    var watcher = chokidar.watch(articlesPath, {
         persistent: true
     });
 
