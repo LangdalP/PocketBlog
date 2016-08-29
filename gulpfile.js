@@ -1,33 +1,43 @@
 var gulp = require('gulp');
 var fs = require('fs-extra')
 
-var imageContentDestinationPath = 'images/content';
-var articleDestinationPath = 'content/articles';
+var imageContentSrcPath = require('./config.json')['imageSource']
+var articleSrcPath = require('./config.json')['articleSource']
+var imageContentDstPath = 'images/content';
+var articleDstPath = 'content/articles';
 
-gulp.task('clean-images', function() {
+gulp.task('clean-images', function () {
 	// Delete images
-	fs.removeSync(imageContentDestinationPath );
+	fs.remove(imageContentDstPath, function (err) {
+		if (err) return console.error(err);
+	});
 });
 
-gulp.task('clean-articles', function() {
+gulp.task('clean-articles', function () {
 	// Delete articles
-	fs.removeSync(articleDestinationPath );
+	fs.remove(articleDstPath, function (err) {
+		if (err) return console.error(err);
+	});
 });
 
-gulp.task('clean', ['clean-images', 'clean-articles'], function() {
-	// Do nothing
+gulp.task('clean', ['clean-images', 'clean-articles'], function () {
+	// clean-images and clean-articles are called as dependencies
 });
 
-gulp.task('images', ['clean'], function() {
-	// Must be customized.
-	// Example: Copy from a folder, or download from ftp.
+gulp.task('images', ['clean-images'], function () {
+	// Can be customized
+	fs.copy(imageContentSrcPath, imageContentDstPath, function (err) {
+		if (err) return console.error(err);
+	});
 });
 
-gulp.task('articles', ['clean'], function() {
-	// Must be customized.
-	// Example: Copy from a folder, or download from ftp.
+gulp.task('articles', ['clean-articles'], function () {
+	// Can be customized
+	fs.copy(articleSrcPath, articleDstPath, function (err) {
+		if (err) return console.error(err);
+	});
 });
 
-gulp.task('default', function() {
+gulp.task('default', ['images', 'articles'], function () {
 	console.log('Cleaning and fetching content');
 });

@@ -1,6 +1,6 @@
 var marked = require('marked'); // For markdown-parsing
 
-var articles = require('./articles/fetcher.js'); // Helper for fetching article if it exists
+var articles = require('./content/fetcher.js'); // Helper for fetching article if it exists
 
 function registerRoutes(app, auth) {
     

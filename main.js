@@ -4,8 +4,8 @@ var basicAuth = require('basic-auth'); // Authentication
 var marked = require('marked'); // For markdown-parsing
 var highlightjs = require('highlight.js');
 
-var watcher = require('./articles/watcher.js'); // Helper for listening on changes to articles
-var articles = require('./articles/fetcher.js'); // Helper for fetching article if it exists
+var watcher = require('./content/watcher.js'); // Helper for listening on changes to articles
+var articles = require('./content/fetcher.js'); // Helper for fetching article if it exists
 var admins = require('./admins.json'); // List of admin users
 var routes = require('./routes.js');
 
@@ -52,9 +52,5 @@ app.use('/images', express.static('images'));
 app.use('/styles', express.static('styles'));
 
 routes.registerRoutes(app, auth);
-
-app.listen(3000, function () {
-    console.log('Running PocketBlog on port 3000!');
-});
 
 module.exports = app;

@@ -53,6 +53,9 @@ content/articles/*.md
 images/*
 !images/site/
 
+# Install-specific configuration
+config.json
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
