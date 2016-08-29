@@ -4,7 +4,7 @@
   "description": "A very bare bones blog application",
   "scripts": {
     "start": "node bin/www",
-    "postinstall": "cp 0000_example.md content/articles"
+    "postinstall": "cp example/0000_example.md content/articles"
   },
   "repository": {
     "type": "git",
