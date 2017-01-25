@@ -2,6 +2,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+$pocketBlogRoot = __DIR__;
+
 Twig_Autoloader::register();
 $templateLoader = new Twig_Loader_Filesystem(__DIR__ . '/views');
 $twig = new Twig_Environment($templateLoader, array(
@@ -11,7 +13,7 @@ $twig = new Twig_Environment($templateLoader, array(
 $router = new AltoRouter();
 
 $router->map('GET', '/', 'PocketBlog\\BlogController::index');
-$router->map('GET', '/item/[:name]', 'PocketBlog\\BlogController::viewArticle');
+$router->map('GET', '/post/[:name]', 'PocketBlog\\BlogController::viewPost');
 
 // Match current request url
 $match = $router->match();

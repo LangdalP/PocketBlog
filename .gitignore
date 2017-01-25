@@ -6,8 +6,8 @@
 tags
 
 # Articles
-content/*.md
-!content/example.md
+posts/*.md
+!posts/example.md
 
 # Images, excluding site graphics
 images/*

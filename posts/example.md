@@ -1,3 +1,7 @@
+---
+Title: Urin
+Knallbert: Smake
+---
 # Example Article
 <p class="article-info">Some text written on the 24th of August</p>
 

@@ -13,7 +13,8 @@
     ],
     "require": {
         "altorouter/altorouter": "1.2.0",
-        "twig/twig": "~1.0"
+        "twig/twig": "~1.0",
+        "erusev/parsedown": "^1.6"
     },
     "autoload": {
         "psr-4": {"PocketBlog\\": "src/"}
