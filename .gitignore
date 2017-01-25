@@ -17,6 +17,6 @@ images/*
 vendor/
 
 # Twig cache
-twig-cache/
+twig-cache/*
 !twig-cache/.gitkeep
 
