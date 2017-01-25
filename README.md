@@ -34,4 +34,3 @@ This is a minimal markdown example
 
 - Functionality for listing available articles
 - Add proper 404 page
-- Support for embedding page metadata in markdown files
