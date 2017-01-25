@@ -16,6 +16,7 @@ The core goals of this project is to write a simple web application that is easy
 ```markdown
 ---
 Title: Example
+Description: Some descriptive text
 ---
 # Blog Post Title
 
