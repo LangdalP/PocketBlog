@@ -15,7 +15,7 @@ The core goals of this project is to write a simple web application that is easy
 ## Example blog post file
 ```markdown
 ---
-Title: Urin
+Title: Example
 ---
 # Blog Post Title
 
