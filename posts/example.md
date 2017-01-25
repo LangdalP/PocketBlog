@@ -5,7 +5,7 @@ Knallbert: Smake
 # Example Article
 <p class="article-info">Some text written on the 24th of August</p>
 
-This article is just an example of how to write and format an article for PocketBlog. Just write a markdown document and put it in the `articles`folder.
+This article is just an example of how to write and format an article for PocketBlog. Just write a markdown document and put it in the `posts` folder.
 
 ## A Few Peculiarities
 
