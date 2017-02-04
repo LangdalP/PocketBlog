@@ -33,7 +33,8 @@ class ContentParser
 
     public static function parseFile($fileName) {
         global $pocketBlogRoot;
-        $raw_content = file_get_contents($pocketBlogRoot . '/posts/' . $fileName);
+        $raw_content = @file_get_contents($pocketBlogRoot . '/posts/' . $fileName);
+        if ($raw_content === false) return false;
         $contentWithMeta = ContentParser::consumeMetadata($raw_content);
         $contentWithMeta['content'] = \Parsedown::instance()->text($contentWithMeta['content']);
         return $contentWithMeta;
