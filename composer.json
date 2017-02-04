@@ -1,0 +1,22 @@
+{
+    "name": "pedervl/pocket-blog",
+    "description": "A very bare bones blog application",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Peder Voldnes Langdal",
+            "email": "peder.langdal@gmail.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "1.2.0",
+        "twig/twig": "~1.0",
+        "erusev/parsedown": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {"PocketBlog\\": "src/"}
+    }
+}
