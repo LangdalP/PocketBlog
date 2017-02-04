@@ -13,7 +13,7 @@ class BlogController
         echo $template->render(
             array(
                 'pageTitle' => $contentWithMeta['meta']['Title'],
-                'article' => $contentWithMeta['content']
+                'post' => $contentWithMeta['content']
         ));
     }
 
@@ -25,7 +25,7 @@ class BlogController
         echo $template->render(
             array(
                 'pageTitle' => $contentWithMeta['meta']['Title'],
-                'article' => $contentWithMeta['content']
+                'post' => $contentWithMeta['content']
         ));
     }
 

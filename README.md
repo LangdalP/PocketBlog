@@ -17,11 +17,17 @@ The core goals of this project is to write a simple web application that is easy
 ---
 Title: Example
 Description: Some descriptive text
+Author: Author K. Authorson
+Date: 4th of May, 2020
 ---
 # Blog Post Title
 
 This is a minimal markdown example
 ```
+
+## How the metadata is used
+
+The `Title` value is used as the page title. The values for `Author` and `Date` are used to create a byline such as "Written on the 4th of May, 2020 by Author K. Authorson". The description is currently not used for anything.
 
 ## Basic setup
 
@@ -33,6 +39,4 @@ This is a minimal markdown example
 ## TODO
 
 - Functionality for listing available articles
-- Add proper 404 page
-- Use date metadata to display post date
-- Modularize views
+- Go through code and standardize coding style
