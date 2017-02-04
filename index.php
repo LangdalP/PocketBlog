@@ -18,6 +18,7 @@ $router = new AltoRouter();
 $router->map('GET', '/', 'PocketBlog\\BlogController::index');
 $router->map('GET', '/post/[:name]', 'PocketBlog\\BlogController::viewPost');
 $router->map('GET', '/posts/', 'PocketBlog\\ContentManager::listPosts');
+$router->map('GET', '/contact/', 'PocketBlog\\BlogController::viewContactPage');
 
 // Match current request url
 $match = $router->match();

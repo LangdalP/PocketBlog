@@ -7,9 +7,20 @@ namespace PocketBlog;
 class BlogController
 {
     public static function index() {
-        global $twig, $index_article;
+        global $twig, $index_post;
         $template = $twig->load('index_page.twig');
-        $contentWithMeta = ContentParser::parseFile($index_article);
+        $contentWithMeta = ContentParser::parseFile($index_post);
+        echo $template->render(
+            array(
+                'pageTitle' => $contentWithMeta['meta']['Title'],
+                'post' => $contentWithMeta['content']
+        ));
+    }
+
+    public static function viewContactPage() {
+        global $twig, $contact_post;
+        $template = $twig->load('index_page.twig');
+        $contentWithMeta = ContentParser::parseFile($contact_post);
         echo $template->render(
             array(
                 'pageTitle' => $contentWithMeta['meta']['Title'],
@@ -42,7 +53,7 @@ class BlogController
         echo $template->render(
             array(
                 'pageTitle' => $contentWithMeta['meta']['Title'],
-                'article' => $contentWithMeta['content']
+                'post' => $contentWithMeta['content']
         ));
     }
 }
