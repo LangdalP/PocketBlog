@@ -4,6 +4,7 @@
   "description": "A very bare bones blog application",
   "scripts": {
     "start": "PORT=80 NODE_ENV=production node bin/www",
+    "start-win": "set PORT=80 && set NODE_ENV=production && node bin/www",
     "start-dev": "node bin/www",
     "postinstall": "cp example/0000_example.md content/articles"
   },
