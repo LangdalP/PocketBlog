@@ -2,6 +2,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+include 'config.php';
+
 $pocketBlogRoot = __DIR__;
 $ignoredPosts = array(".", "..", "404.md");
 

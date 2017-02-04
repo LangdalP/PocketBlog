@@ -7,9 +7,9 @@ namespace PocketBlog;
 class BlogController
 {
     public static function index() {
-        global $twig;
+        global $twig, $index_article;
         $template = $twig->load('index_page.twig');
-        $contentWithMeta = ContentParser::parseFile('example.md');
+        $contentWithMeta = ContentParser::parseFile($index_article);
         echo $template->render(
             array(
                 'pageTitle' => $contentWithMeta['meta']['Title'],
