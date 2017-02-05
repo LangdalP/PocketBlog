@@ -2,6 +2,9 @@
 *.swp
 *.swo
 
+# Sublime workspace
+*.sublime-workspace
+
 # CTags tags
 tags
 
