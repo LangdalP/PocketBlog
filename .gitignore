@@ -13,10 +13,6 @@ posts/*.md
 !posts/example.md
 !posts/404.md
 
-# Images, excluding site graphics
-images/*
-!images/site/
-
 # Dependencies
 vendor/
 

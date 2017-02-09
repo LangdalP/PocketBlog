@@ -23,7 +23,7 @@ HEADER
 
 #header-container {
     background: #32577A;
-    background-image: url('/images/site/fjell_header1.png');
+    background-image: url('/static/images/fjell_header1.png');
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -97,7 +97,7 @@ MAIN - Articles and other content
 
 #main-container {
     margin-top: 2rem;
-    background-image: url('/images/site/footer_topp1.png');
+    background-image: url('/static/images/footer_topp1.png');
     background-position: bottom;
     background-repeat: repeat-x;
 }
