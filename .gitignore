@@ -8,14 +8,13 @@
 # CTags tags
 tags
 
-# Articles
+# Blog posts
 posts/*.md
 !posts/example.md
 !posts/404.md
 
-# Images, excluding site graphics
-images/*
-!images/site/
+# Blog images
+static/images/content/*
 
 # Dependencies
 vendor/
