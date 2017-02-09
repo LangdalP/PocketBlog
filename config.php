@@ -1,6 +1,6 @@
 <?php
 
-$index_post = 'example.md';
+$index_post = 'langdal-index.md';
 $contact_post = 'contact.md';
 
 ?>
